@@ -1,0 +1,68 @@
+name: Bug Report
+description: Report a reproducible bug or regression
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill this out. The more detail you provide, the faster we can fix it.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what is happening.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Step-by-step instructions to reproduce the issue.
+      placeholder: |
+        1. Open the app
+        2. Go to ...
+        3. Tap ...
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      description: What actually happened? Include any error messages or logs.
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device & Android version
+      placeholder: "e.g. Samsung Galaxy S24, Android 14 (API 34)"
+    validations:
+      required: true
+
+  - type: input
+    id: app_version
+    attributes:
+      label: App version
+      placeholder: "e.g. 1.0.0 (from Settings → About)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs (optional)
+      description: Paste any relevant logcat output here.
+      render: shell
